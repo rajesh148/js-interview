@@ -1,0 +1,223 @@
+ Body style
+
+(node:1645) UnhandledPromiseRejectionWarning: AssertionError: expected 'rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box' to include 'linear-gradient(to left, rgb(0, 0, 0), rgb(128, 128, 128)) '
+
+    at /projects/challenge/test/test-css.js:53:30
+
+    at <anonymous>
+
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+(node:1645) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+
+    2) body
+
+  Header style
+
+(node:1645) UnhandledPromiseRejectionWarning: AssertionError: expected 'rgba(0, 0, 0, 0) linear-gradient(to left, rgb(0, 0, 0), rgb(128, 128, 128)) repeat scroll 0% 0% / auto padding-box border-box' to include 'rgb(51, 51, 51) none repeat scroll 0% 0% / auto padding-box border-box'
+
+    at /projects/challenge/test/test-css.js:64:30
+
+    at <anonymous>
+
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+(node:1645) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+
+    3) Header
+
+(node:1645) UnhandledPromiseRejectionWarning: AssertionError: expected 'rgba(0, 0, 0, 0) linear-gradient(to left, rgb(0, 0, 0), rgb(128, 128, 128)) repeat scroll 0% 0% / auto padding-box border-box' to include 'rgb(51, 51, 51) none repeat scroll 0% 0% / auto padding-box border-box'
+
+    at /projects/challenge/test/test-css.js:70:30
+
+    at <anonymous>
+
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+(node:1645) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+
+    4) Footer
+
+  Header selection
+
+(node:1645) UnhandledPromiseRejectionWarning: NoSuchElementError: no such element: Unable to locate element: {"method":"css selector","selector":".current"}
+
+  (Session info: headless chrome=78.0.3904.108)
+
+    at Object.throwDecodedError (/projects/challenge/node_modules/selenium-webdriver/lib/error.js:550:15)
+
+    at parseHttpResponse (/projects/challenge/node_modules/selenium-webdriver/lib/http.js:565:13)
+
+    at Executor.execute (/projects/challenge/node_modules/selenium-webdriver/lib/http.js:491:26)
+
+    at <anonymous>
+
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+(node:1645) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+
+    5) header selectors
+
+  Index Page
+
+    6) Index page content
+
+  Login Page
+
+    7) Login page content
+
+  Register Page
+
+    8) Register page content
+
+  Expense Page
+
+    9) Expense page content
+
+  2 passing (10s)
+
+  9 failing
+
+  1) Main content styling
+
+       css:
+
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/projects/challenge/test/test-css.js)
+
+  
+
+  2) Body style
+
+       body:
+
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/projects/challenge/test/test-css.js)
+
+  
+
+  3) Header style
+
+       Header:
+
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/projects/challenge/test/test-css.js)
+
+  
+
+  4) Header style
+
+       Footer:
+
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/projects/challenge/test/test-css.js)
+
+  
+
+  5) Header selection
+
+       header selectors:
+
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/projects/challenge/test/test-css.js)
+
+  
+
+  6) Index Page
+
+       Index page content:
+
+     Uncaught AssertionError: expected undefined to equal 'text/css'
+
+      at Request._callback (test/test-page.js:21:25)
+
+      at Request.self.callback (node_modules/request/request.js:185:22)
+
+      at Request.<anonymous> (node_modules/request/request.js:1154:10)
+
+      at IncomingMessage.<anonymous> (node_modules/request/request.js:1076:12)
+
+      at endReadableNT (_stream_readable.js:1064:12)
+
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  7) Login Page
+
+       Login page content:
+
+      Uncaught AssertionError: expected 'Expense Tracker' to equal 'Login'
+
+      + expected - actual
+
+      -Expense Tracker
+
+      +Login
+
+      
+
+      at Request._callback (test/test-page.js:60:31)
+
+      at Request.self.callback (node_modules/request/request.js:185:22)
+
+      at Request.<anonymous> (node_modules/request/request.js:1154:10)
+
+      at IncomingMessage.<anonymous> (node_modules/request/request.js:1076:12)
+
+      at endReadableNT (_stream_readable.js:1064:12)
+
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  8) Register Page
+
+       Register page content:
+
+      Uncaught AssertionError: expected 'Expense Tracker' to equal 'Register'
+
+      + expected - actual
+
+      -Expense Tracker
+
+      +Register
+
+      
+
+      at Request._callback (test/test-page.js:116:31)
+
+      at Request.self.callback (node_modules/request/request.js:185:22)
+
+      at Request.<anonymous> (node_modules/request/request.js:1154:10)
+
+      at IncomingMessage.<anonymous> (node_modules/request/request.js:1076:12)
+
+      at endReadableNT (_stream_readable.js:1064:12)
+
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  9) Expense Page
+
+       Expense page content:
+
+      Uncaught AssertionError: expected 'Expense Tracker' to equal 'Note Expense'
+
+      + expected - actual
+
+      -Expense Tracker
+
+      +Note Expense
+
+      
+
+      at Request._callback (test/test-page.js:171:31)
+
+      at Request.self.callback (node_modules/request/request.js:185:22)
+
+      at Request.<anonymous> (node_modules/request/request.js:1154:10)
+
+      at IncomingMessage.<anonymous> (node_modules/request/request.js:1076:12)
+
+      at endReadableNT (_stream_readable.js:1064:12)
+
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+
+      at process._tickCallback (internal/process/next_tick.js:181:9)

@@ -1,0 +1,118 @@
+/* Put your code here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+/* Header style*/
+
+header {
+  height: 50px;
+  align-items: center;
+  padding: 14px;
+  background: linear-gradient(0.25turn, black 80%, white);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+header a:link:active,
+a:visited:active {
+  background-color: aliceblue;
+}
+
+header a:link,
+a:visited {
+  /* color: (internal value); */
+  cursor: auto;
+}
+
+/* Footer style*/
+footer {
+  /* position: sticky; */
+  height: 50px;
+  background: linear-gradient(0.25turn, black 80%, white);
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body {
+  text-align: center;
+}
+
+/* INdex page style*/
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.page-border {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.quote-box {
+  height: 200px;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.quote-heading {
+  padding-bottom: 20px;
+}
+
+/* Login page style*/
+
+strong a {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+  border: 0;
+  background-color: gainsboro;
+  font-size: 22px;
+}
+/* input[type="text"]{
+    
+} */
+button {
+  width: 200px;
+  height: 40px;
+  color: white;
+  border: 0;
+  background-color: black;
+}
