@@ -111,15 +111,15 @@ const nums = [1, 2, 3, 4];
 
 //CALL polifil
 
-// const car1 = {
-//   color: "Red",
-// };
+const car1 = {
+  color: "Red",
+};
 
-// function purchaseCar(company, price) {
-//   console.log(
-//     `I have purchased ${this.color} - ${company} car and it costs ${price}`
-//   );
-// }
+function purchaseCar(company, price) {
+  console.log(
+    `I have purchased ${this.color} - ${company} car and it costs ${price}`
+  );
+}
 
 // Function.prototype.myCall = function (context = {}, ...args) {
 //   if (typeof this != "function") {
@@ -154,15 +154,15 @@ const nums = [1, 2, 3, 4];
 
 //BIND Polifil
 
-// Function.prototype.myBind = function (context = {}, ...args) {
+// Function.prototype.myBind = function (context, ...args) {
 //   if (typeof this !== "function") {
 //     throw new Error(this + "It's not callable");
 //   }
 
-//   context.fn = this;
+//   context = this;
 
 //   return function (...params) {
-//     return context.fn(...args, ...params);
+//     return context(...args, ...params);
 //   };
 // };
 
@@ -172,32 +172,100 @@ const nums = [1, 2, 3, 4];
 
 //Memoise Polifil
 
-const myMemoize = (fn, context) => {
-  let res = {};
+// const myMemoize = (fn, context) => {
+//   let res = {};
 
-  return function (...args) {
-    let convertArgs = JSON.stringify(...args);
+//   return function (...args) {
+//     let convertArgs = JSON.stringify(...args);
 
-    if (!res[convertArgs]) {
-      res[convertArgs] = fn.call(context || this, ...args);
+//     if (!res[convertArgs]) {
+//       res[convertArgs] = fn.call(context || this, ...args);
+//     }
+
+//     return res[convertArgs];
+//   };
+// };
+
+// const complexCalc = (num1, num2) => {
+//   for (let i = 0; i < 100000000; i++) {}
+
+//   return num1 * num2;
+// };
+
+// let memoizedValues = myMemoize(complexCalc);
+
+// console.time("First Call");
+// console.log(memoizedValues(9467, 7649));
+// console.timeEnd("First Call");
+
+// console.time("Second Call");
+// console.log(memoizedValues(9467, 7649));
+// console.timeEnd("Second Call");
+
+//POLIFIL FOR PROMISE
+
+function PromisPolyfil(executor) {
+  let onResolve,
+    onReject,
+    isFullFilled = false,
+    isRejected = false,
+    isCalled = false,
+    value;
+
+  function resolve(val) {
+    isFullFilled = true;
+    value = val;
+    if (typeof onResolve === "function") {
+      onResolve(value);
+      isCalled = true;
     }
+  }
 
-    return res[convertArgs];
+  function reject(val) {
+    isRejected = true;
+    value = val;
+
+    if (typeof onReject === "function") {
+      onReject(value);
+      isCalled = true;
+    }
+  }
+
+  this.then = function (callback) {
+    onResolve = callback;
+    if (isFullFilled && !isCalled) {
+      isCalled = true;
+      onResolve(value);
+    }
+    return this;
   };
-};
 
-const complexCalc = (num1, num2) => {
-  for (let i = 0; i < 100000000; i++) {}
+  this.catch = function (callback) {
+    onReject = callback;
+    if (isRejected && !isCalled) {
+      isCalled = true;
+      onReject(value);
+    }
+    return this;
+  };
 
-  return num1 * num2;
-};
+  try {
+    executor(resolve, reject);
+  } catch (error) {
+    reject(error);
+  }
+}
 
-let memoizedValues = myMemoize(complexCalc);
+const examplePromise = new PromisPolyfil((resolve, reject) => {
+  // setTimeout(() => {
+  reject(2);
+  // }, 1000);
+});
 
-console.time("First Call");
-console.log(memoizedValues(9467, 7649));
-console.timeEnd("First Call");
-
-console.time("Second Call");
-console.log(memoizedValues(9467, 7649));
-console.timeEnd("Second Call");
+examplePromise
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
