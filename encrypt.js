@@ -9,6 +9,7 @@ function encrypt(M, vowelShift, consonantShift) {
       const isUpperCase = char === char.toUpperCase();
       const baseCode = isUpperCase ? 65 : 97; // ASCII code for 'A' or 'a'
       const charCode = char.charCodeAt(0) - baseCode;
+      console.log(charCode);
       let newCharCode;
 
       if (vowels.has(char)) {
@@ -17,7 +18,10 @@ function encrypt(M, vowelShift, consonantShift) {
       } else {
         // Shift consonants forward
         newCharCode = (charCode + consonantShift) % alphabetSize;
+        console.log("new char code", newCharCode);
       }
+
+      console.log("after adding base code", newCharCode + baseCode);
 
       result += String.fromCharCode(newCharCode + baseCode);
     } else {
