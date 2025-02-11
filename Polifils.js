@@ -1,21 +1,21 @@
-// ///POLIFIL FOR MAP FUNC
-// // Array.prototype.myMapFunc = function (cb) {
-// //   let temp = [];
+///POLIFIL FOR MAP FUNC
+// Array.prototype.myMapFunc = function (cb) {
+//   let temp = [];
 
-// //   for (let i = 0; i < this.length; i++) {
-// //     temp.push(cb(this[i], i, this));
-// //   }
+//   for (let i = 0; i < this.length; i++) {
+//     temp.push(cb(this[i], i, this)); 
+//   }
 
-// //   return temp;
-// // };
+//   return temp;
+// };
 
-// // const nums = [1, 2, 3, 4];
+// const nums = [1, 2, 3, 4];
 
-// // const multiplyByFour = nums.myMapFunc((num) => num * 4);
+// const multiplyByFour = nums.myMapFunc((num) => num * 4);
 
-// // console.log(multiplyByFour);
+// console.log(multiplyByFour);
 
-// //POLIFIL FOR FILTER
+//POLIFIL FOR FILTER
 
 // const students = [
 //   { name: "Piyush", rollNumber: 31, marks: 80 },

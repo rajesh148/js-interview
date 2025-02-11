@@ -28,4 +28,4 @@ function getTheSum(num) {
   return -1;
 }
 
-console.log(getTheSum(49));
+console.log(getTheSum(50));

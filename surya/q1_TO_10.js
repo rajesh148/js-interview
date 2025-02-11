@@ -155,7 +155,7 @@
 
 //q9)Find the duplicates in an arry;
 
-// let ar = [1, 1, 2, 2, 3, 3, 2, 1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 1];
+let ar = [1, 1, 2, 2, 3, 3, 2, 1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 1];
 
 // function findTheDuplicates(ar) {
 //   let temp = [];
@@ -178,6 +178,15 @@
 
 // console.log(findTheDuplicates(ar));
 
+// function duplicates(ar) {
+//   return ar.filter((item, i) => {
+//     console.log(ar, i);
+//     ar.indexOf(item) === i;
+//   });
+// }
+
+// console.log(duplicates(ar));
+
 //q10) Sort the following array in ascending as well as descending order by libraryID
 // var library = [
 //   { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
@@ -194,5 +203,3 @@
 // }
 
 // console.log(sortTheAr(library));
-
-

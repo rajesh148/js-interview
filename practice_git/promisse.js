@@ -52,7 +52,6 @@ function z() {
       console.log(a, b);
     }
     y();
-
   }
   x();
 }
