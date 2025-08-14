@@ -1,7 +1,3 @@
-/*
-Hi, I searched on the internet and I found this solution. Here I got the logic. Thank you for giving this opportunity.
-*/
-
 function getTheSum(num) {
   //The formula to caluclate the totalSum of the given Number
   let totalSum = (num * (num + 1)) / 2;
