@@ -1,0 +1,4 @@
+div {
+  height: 900px; /* or any fixed height */
+  overflow: auto; /* or overflow: scroll */
+}
